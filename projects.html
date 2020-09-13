@@ -89,6 +89,11 @@
                 box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
                 
             }
+            .card > img{
+                max-width:100%; 
+                height:auto;
+                padding: 32px;
+            }
             @media screen and (max-width: 600px){
                 .card{
                     justify-content: center;
@@ -96,16 +101,11 @@
                     grid-template-columns: 1fr;
                 }
                 .card > img{
-                    width: 500px;
+                    max-width: 100%;
                     height: auto;
                     grid-row: 1 / 2;
-                    padding: 0px;
+                    padding: 16px;
                 }
-            }
-            .card > img{
-                max-width:100%; 
-                height:auto;
-                padding: 32px;
             }
             .description{
                 justify-self: start;
