@@ -182,6 +182,19 @@
             .technologies h1{
                 grid-column: 3 / 11;
             }
+            @media screen and (max-width: 600px){
+                .list{
+                    display: grid;
+                    grid-template-columns: 1fr 1fr 1fr;
+                    grid-column: 1 / 17;
+                    justify-self: center;
+                }
+                .technologies h1{
+                    grid-column: 1 / 17;
+                    justify-self: center;
+                }
+            }
+            
 
             .technologies img{
                 width: 50px;
