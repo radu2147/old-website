@@ -1,0 +1,296 @@
+<html>
+    <head>
+        <title>
+            Projects
+        </title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta charset="utf-8">
+        <style>
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                font-family: 'Montserrat',sans-serif;
+                color: #555;
+                letter-spacing: 1.5px;
+            }
+            body{
+                background-color:#f2f2f2;
+            }
+            nav{
+                display: grid;
+                grid-template-columns: repeat(16, 1fr);
+                background-color:#1abc9c;
+                align-items: center;
+                height: 180px;
+            }
+            nav a{
+                text-decoration: none;
+                color: white;
+                letter-spacing: 1.5px;
+            }
+            li{
+                list-style-type: none;
+                font-weight: bold;
+                padding: 15px;
+                color: white;
+                letter-spacing: 2px;
+                font-size: 16px;
+            }
+            li:not(#name):hover{
+                color: black;
+            }
+            #name{
+                grid-column: 3 / 6;
+                font-size: 23px;
+            }
+            #about{
+                grid-column: 11;
+            }
+            
+            #projects{
+                grid-column: 12;
+            }
+
+            
+            #contact{
+                grid-column: 13;
+            }
+            p{
+                padding: 16px;
+            }
+            @media screen and (max-width: 600px) {
+                li#name {
+                    display: none;
+                }
+                nav {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    background-color:#1abc9c;
+                    align-items: center;
+                    height: 130px;
+                }
+            }
+            .container{
+                margin-left: 10%;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                margin-right: 10%;
+            }
+            .card{
+                background-color: white;
+                display: grid;
+                grid-template-columns: 1fr 1fr;
+                align-items: center;
+                text-align: center;
+                margin-bottom: 64px;
+                justify-items: center;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                
+            }
+            @media screen and (max-width: 600px){
+                .card{
+                    justify-content: center;
+                    grid-template-rows: 1fr 2fr;
+                    grid-template-columns: 1fr;
+                }
+                .card > img{
+                    width: 500px;
+                    height: auto;
+                    grid-row: 1 / 2;
+                    padding: 0px;
+                }
+            }
+            .card > img{
+                max-width:100%; 
+                height:auto;
+                padding: 32px;
+            }
+            .description{
+                justify-self: start;
+            }
+            .description *{
+                padding-top: 32px;
+            }
+            .technology{
+                display: flex;
+                padding: 16px;
+                flex-direction: column;
+                align-items: center;
+            }
+            .technology > img{
+                width: 50px;
+                height: auto;
+                max-width: 100%;
+
+            }
+            .project_tech{
+                display: grid;
+                grid-template-columns: 1fr 1fr 1fr 1fr;
+            }
+            .technology h6{
+                padding: 5px;
+            }
+            
+            footer{
+                background-color: black;
+                display: grid;
+                justify-content: center;
+            }
+            .footer_social{
+                display: grid;
+                justify-content: center;
+                grid-template-rows: 1fr 1fr;
+                grid-gap: 20px;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                justify-items: center;
+                align-items: top;
+                align-content: top;
+            }
+            .footer_social p{
+                grid-row: 2;
+                grid-column: 1 / 6;
+            }
+            footer img{
+                width: 32px;
+                height: 32px;
+                margin-top: 60px;
+                border-radius: 50%;
+            }
+            .icons_list {
+                grid-row: 1;
+                grid-column: 1 / 6;
+                display: grid;
+                grid-gap: 20px;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <li id="name">
+                ©Radu Baston
+            </li>
+            <li id="about">
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+            
+            <li id="projects">
+                <a href="projects.html">
+                    Projects
+                </a>
+            </li>
+            <li id="contact">
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </nav>
+        <div class="container">
+            <div class="card">
+                <img src="projects_photos/poza.png">
+                <div class="description">
+                    <h1>
+                        <b>Homemade cakes website</b>
+                    </h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. In, inventore eius officia omnis, perspiciatis nihil cumque unde asperiores, consectetur sit provident atque. Fugiat nulla, est minus corporis nesciunt exercitationem praesentium.
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi cum neque maxime nisi natus non ad autem eveniet sit, quae unde reiciendis rerum dicta quis suscipit laudantium possimus voluptate ipsa?
+                    </p>
+                    <div class="project_tech">
+                        <div class="technology">
+                            <img src="tech_icons/python.png">
+                            <h6>
+                                Python
+                            </h6>
+                        </div>
+                        <div class="technology">
+                            <img src="tech_icons/django.png">
+                            <h6>
+                                Django
+                            </h6>
+                        </div>
+                        <div class="technology">
+                            <img src="tech_icons/html5.png">
+                            <h6>
+                                Html
+                            </h6>
+                        </div>
+                        <div class="technology">
+                            <img src="tech_icons/css.png">
+                            <h6>
+                                Css
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="card">
+                <img src="projects_photos/poza.png">
+                <div class="description">
+                    <h1>
+                        <b>Homemade cakes website</b>
+                    </h1>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi cum neque maxime nisi natus non ad autem eveniet sit, quae unde reiciendis rerum dicta quis suscipit laudantium possimus voluptate ipsa?
+                    </p>
+                    <p>
+                        <b>
+                            Github link: 
+                        </b>
+                        https://github.com/radu2147/torturidecasa
+                    </p>
+                    <div class="project_tech">
+                        <div class="technology">
+                            <img src="tech_icons/python.png">
+                            <h6>
+                                Python
+                            </h6>
+                        </div>
+                        <div class="technology">
+                            <img src="tech_icons/django.png">
+                            <h6>
+                                Django
+                            </h6>
+                        </div>
+                        <div class="technology">
+                            <img src="tech_icons/html5.png">
+                            <h6>
+                                Html
+                            </h6>
+                        </div>
+                        <div class="technology">
+                            <img src="tech_icons/css.png">
+                            <h6>
+                                Css
+                            </h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <footer class="footer">
+            <div class="footer_social">
+                <div class="icons_list">
+                    <a>
+                        <img src="social_media/linkedin.png" alt="linkedin">
+                    </a>
+                    <a href="https://www.facebook.com/radu.baston.7/" target="_blank" rel="noopener noreferrer">
+                        <img src="social_media/fbgood.png" >
+                    </a>
+                    <a href="https://github.com/radu2147" target="_blank" rel="noopener noreferrer">
+                        <img src="social_media/img.png">
+                    </a>
+                </div>
+                <p>
+                    Radu Baston
+                </p>
+            </div>
+        </footer>
+
+    </body>
+</html>

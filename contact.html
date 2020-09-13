@@ -1,0 +1,226 @@
+<html>
+    <head>
+        <title>
+            Contact
+        </title>
+
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <style>
+            *{
+                box-sizing: border-box;
+                margin: 0;
+                font-family: 'Montserrat',sans-serif;
+                color: #555;
+                letter-spacing: 1.5px;
+            }
+            nav{
+                display: grid;
+                grid-template-columns: repeat(16, 1fr);
+                background-color:#1abc9c;
+                align-items: center;
+                height: 180px;
+            }
+            nav a{
+                text-decoration: none;
+                color: white;
+                letter-spacing: 1.5px;
+            }
+            li{
+                list-style-type: none;
+                font-weight: bold;
+                padding: 15px;
+                color: white;
+                letter-spacing: 2px;
+                font-size: 16px;
+            }
+            li:not(#name):hover{
+                color: black;
+            }
+            #name{
+                grid-column: 3 / 6;
+                font-size: 23px;
+            }
+            #about{
+                grid-column: 11;
+            }
+            
+            #projects{
+                grid-column: 12;
+            }
+
+            
+            #contact{
+                grid-column: 13;
+            }
+            p{
+                padding: 16px;
+            }
+            @media screen and (max-width: 600px) {
+                li#name {
+                    display: none;
+                }
+                nav {
+                    display: flex;
+                    flex-direction: row;
+                    justify-content: space-evenly;
+                    background-color:#1abc9c;
+                    align-items: center;
+                    height: 130px;
+                }
+            }
+            
+            .container{
+                margin-left: 25%;
+                margin-top: 50px;
+                margin-bottom: 50px;
+                margin-right: 25%;
+            }
+            .message {
+                margin-left: 15%;
+                margin-right: 15%;
+                margin-bottom: 50px;
+                text-align: center;
+            }
+            @media screen and (max-width: 600px) {
+                .container{
+                    margin-left: 5%;
+                    margin-right: 5%;
+                }
+            }
+            .message h2{
+                color: black;
+                padding: 16px;
+            }
+            .message h4{
+                padding: 16px;
+                font-weight: 400;
+                line-height: 25px;
+            }
+            form {
+                display: flex;
+                flex-direction: column;
+
+            }
+            input, textarea{
+                border-radius: 5px;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                border: 1px solid #cccccc;
+                margin-bottom: 32px;
+                padding: 10px;
+            }
+            button {
+                width: 100px;
+                padding: 10px;
+                align-self: center;
+                box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+                border: 1px solid #cccccc;
+                background-color: #5cb85c;
+                color: white;
+                border-radius: 5px;
+                font-weight: bold;
+            }
+            button:active{
+                opacity: 90%;
+            }
+            button:hover{
+                background-color: #4cae4c;
+            }
+            footer{
+                background-color: black;
+                display: grid;
+                justify-content: center;
+            }
+            .footer_social{
+                display: grid;
+                justify-content: center;
+                grid-template-rows: 1fr 1fr;
+                grid-gap: 20px;
+                grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+                justify-items: center;
+                align-items: top;
+                align-content: top;
+            }
+            .footer_social p{
+                grid-row: 2;
+                grid-column: 1 / 6;
+            }
+            footer img{
+                width: 32px;
+                height: 32px;
+                margin-top: 60px;
+                border-radius: 50%;
+            }
+            .icons_list {
+                grid-row: 1;
+                grid-column: 1 / 6;
+                display: grid;
+                grid-gap: 20px;
+                grid-template-columns: repeat(3, 1fr);
+            }
+        </style>
+    </head>
+    <body>
+        <nav>
+            <li id="name">
+                ©Radu Baston
+            </li>
+            <li id="about">
+                <a href="about.html">
+                    About
+                </a>
+            </li>
+            
+            <li id="projects">
+                <a href="projects.html">
+                    Projects
+                </a>
+            </li>
+            <li id="contact">
+                <a href="contact.html">
+                    Contact
+                </a>
+            </li>
+
+        </nav>
+        <div class="container">
+            <div class="message">
+                <h2>
+                    <strong>
+                        CONTACT ME!
+                    </strong>
+                </h2>
+                <hr>
+                <h4>
+                    Feel free to leave a message here. I am always interested in discussing new projects or creative ideas.    
+                </h4>
+            </div>
+            <form action="https://formspree.io/xjvpbkjo" method="POST">
+                <input type="text" name="name" placeholder="Your name" required>
+                <input type="text" name="_replyto" placeholder="Your email" required>
+                <input type="text" name="subject" placeholder="Subject">
+                <textarea name="message" placeholder="Your message" rows="6"></textarea>
+
+                <button type="submit">Send</button>
+            </form>
+        </div>
+        <footer>
+            <div class="footer_social">
+                <div class="icons_list">
+                    <a>
+                        <img src="social_media/linkedin.png" >
+                    </a>
+                    <a href="https://www.facebook.com/radu.baston.7/" target="_blank" rel="noopener noreferrer">
+                        <img src="social_media/fbgood.png" >
+                    </a>
+                    <a href="https://github.com/radu2147" target="_blank" rel="noopener noreferrer">
+                        <img src="social_media/img.png">
+                    </a>
+                </div>
+                <p>
+                    Radu Baston
+                </p>
+            </div>
+        </footer>
+    </body>
+</html>
